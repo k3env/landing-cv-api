@@ -1,0 +1,7 @@
+node_modules
+.keystone/admin
+*.db*
+*.log
+.env*
+!.env.example
+public

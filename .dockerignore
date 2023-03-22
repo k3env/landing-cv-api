@@ -1,0 +1,8 @@
+.env*
+.git*
+README.md
+node_modules
+.keystone/admin
+*.db*
+*.log
+public
