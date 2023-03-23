@@ -159,6 +159,7 @@ var lists = {
     },
     fields: {
       title: (0, import_fields.text)({}),
+      preview: (0, import_fields.image)({ storage: "local" }),
       description: (0, import_fields_document.document)({
         formatting: true,
         layouts: [

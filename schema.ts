@@ -148,6 +148,7 @@ export const lists: Lists = {
     },
     fields: {
       title: text({}),
+      preview: image({ storage: "local" }),
       description: document({
         formatting: true,
         layouts: [

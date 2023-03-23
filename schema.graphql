@@ -351,6 +351,7 @@ input ProfileCreateInput {
 type Project {
   id: ID!
   title: String
+  preview: ImageFieldOutput
   description: Project_description_Document
   images(where: ImageWhereInput! = {}, orderBy: [ImageOrderByInput!]! = [], take: Int, skip: Int! = 0, cursor: ImageWhereUniqueInput): [Image!]
   imagesCount(where: ImageWhereInput! = {}): Int
@@ -395,6 +396,7 @@ input ProjectOrderByInput {
 
 input ProjectUpdateInput {
   title: String
+  preview: ImageFieldInput
   description: JSON
   images: ImageRelateToManyForUpdateInput
   tags: TagRelateToManyForUpdateInput
@@ -421,6 +423,7 @@ input ProjectUpdateArgs {
 
 input ProjectCreateInput {
   title: String
+  preview: ImageFieldInput
   description: JSON
   images: ImageRelateToManyForCreateInput
   tags: TagRelateToManyForCreateInput

@@ -62,11 +62,16 @@ model Profile {
 }
 
 model Project {
-  id          String  @id @default(cuid())
-  title       String  @default("")
-  description Json    @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
-  images      Image[] @relation("Image_projects")
-  tags        Tag[]   @relation("Project_tags")
+  id                String  @id @default(cuid())
+  title             String  @default("")
+  preview_filesize  Int?
+  preview_extension String?
+  preview_width     Int?
+  preview_height    Int?
+  preview_id        String?
+  description       Json    @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  images            Image[] @relation("Image_projects")
+  tags              Tag[]   @relation("Project_tags")
 }
 
 enum ProfileDegreeType {
